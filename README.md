@@ -6,11 +6,10 @@ Make sure you have GNU/Stow installed with
 ```
 which stow
 ```
-If you don't have it installed, you can install it with:
+If you don't have it installed and you're using Arch Linux, you can install it with:
 ```
 pacman -S stow
 ```
-On Arch Linux.
 Next, clone the dotfiles repo with:
 ```
 git clone https://github.com/ArchWizard56/dotfiles.git ~/.dotfiles

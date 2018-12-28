@@ -1,0 +1,8 @@
+#!/bin/bash
+SCFILE=$HOME/.config/shortcuts
+#gen zsh aliases 
+ZALIAS=$HOME/.zsh_aliases
+RANGERBINDINGS=$HOME/.config/ranger/keybindings.conf
+sed '/#/d' $SCFILE| awk '{print "alias g"$1"=\47cd "$2"\47"}' > $ZALIAS
+sed '/#/d' $SCFILE| awk '{print "map g"$1" cd "$2"\nmap M"$1" shell -f mv %s "$2}' > $RANGERBINDINGS
+

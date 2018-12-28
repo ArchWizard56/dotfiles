@@ -1,0 +1,5 @@
+#!/bin/bash
+scrot /tmp/screenshot.png
+convert /tmp/screenshot.png -blur -1x12 /tmp/screenshotblur.png
+i3lock -n -k -i /tmp/screenshotblur.png  --keyhlcolor=348B3450 --bshlcolor=d23c3dff
+# --ringcolor=ffffffff --line-uses-inside  --separatorcolor=00000000  --insidewrongcolor=d23c3dff --ringvercolor=ffffffff --ringwrongcolor=ffffffff --indpos="x+86:y+1003" --radius=15 --veriftext="" --wrongtext=""

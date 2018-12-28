@@ -1,0 +1,262 @@
+:root {
+    --tabs-border: transparent !important;
+    /* active tab left & right borders - not working in 58?*/
+    --toolbox-border-bottom-color: transparent !important;
+    /* 1px line under background tabs */
+    --chrome-nav-bar-controls-border-color: transparent !important;
+    /* border around url bar */
+}
+
+toolbox {
+    background-color: #000 !important;
+    color: #AAAAAA;
+}
+
+browser {
+    margin-right: -17px !important;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+:root:-moz-any([inFullscreen], [tabsintitlebar]) #TabsToolbar:not(:-moz-lwtheme) { -moz-appearance: none !important; }
+#TabsToolbar {
+    background-color: #000000 !important;
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+    margin-left: 35vw !important;
+    margin-right: -34px !important;
+    max-height: 35px !important;
+}
+
+#nav-bar {
+    margin-bottom: -1px !important;
+    margin-top: -32px !important;
+    margin-left: 75px !important;
+    margin-right: 65vw !important;
+    border-top: none !important;
+    height: 35px;
+    background-color: black !important;
+}
+
+#main-window[sizemode="normal"]>#titlebar {
+    -moz-appearance: initial !important;
+}
+
+#back-button,
+#forward-button,
+#stop-reload-button,
+#nav-bar-overflow-button,
+#PanelUI-button,
+#home-button,
+#customizableui-special-spring1,
+#customizableui-special-spring2,
+#library-button,
+#downloads-button,
+#sidebar-button,
+toolbarbutton,
+#star-button,
+#statuspanel,
+.urlbar-icon.urlbar-page-action,
+.titlebar-placeholder {
+    display: none !important;
+}
+
+#back-button>.toolbarbutton-icon,
+#forward-button>.toolbarbutton-icon {
+    transform: scale(0.9, 0.9) !important;
+    margin-left: -2px !important;
+    margin-right: -2px !important;
+}
+
+#PanelUI-button,
+#customization-panel-container,
+#customization-panelWrapper .panel-arrow {
+    -moz-box-ordinal-group: 0 !important;
+    margin-right: -6px !important;
+}
+
+#appMenu-popup {
+    margin-right: -258px !important;
+}
+
+#appMenu-popup .panel-arrow {
+    margin-right: 248px !important;
+}
+
+#nav-bar-overflow-button {
+    transform: scale(0.9, 0.9) !important;
+    fill: var(--color-overflow) !important;
+}
+
+.tabbrowser-tab {
+    height: 28px !important;
+}
+
+#TabsToolbar .titlebar-placeholder[type="pre-tabs"] {
+    display: none !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    border-left: none !important;
+}
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    color: grey !important;
+    opacity: .2 !important;
+}
+
+#PanelUI-menu-button {
+    display: none !important
+}
+
+
+/* New tab button color */
+
+#new-tab-button,
+.tabs-newtab-button {
+    fill: var(--chrome-color) !important;
+}
+
+
+/* tab line - adjust color & size, default #0a84ff 2px */
+
+.tab-content {
+    background-color: #000 !important;
+    color: #aaaaaa !important;
+}
+.tab-line {
+    background-color: #0a84ff !important;
+    height: 0px !important;
+}
+
+
+/* Hide various elements */
+
+
+/* Menu */
+
+#appMenu-fxa-container,
+
+/* Sign in to Sync */
+
+#appMenu-fxa-container+toolbarseparator,
+
+/* #appMenuRestoreLastSession, */
+
+#appMenu-zoom-controls,
+#appMenu-zoom-controls+toolbarseparator,
+#appMenu-edit-controls,
+#appMenu-edit-controls+toolbarseparator,
+#appMenu-library-button,
+#appMenu-customize-button,
+#appMenu-customize-button+toolbarseparator,
+#appMenu-open-file-button,
+#appMenu-save-file-button,
+#appMenu-find-button,
+#appMenu-more-button,
+
+/* URL Bar */
+#urlbar[focused="true"],
+#urlbar:hover, .searchbar-textbox:hover {
+    box-shadow: 0 0 0 !important;
+    border: 0 solid transparent !important;
+}
+
+#urlbar,
+.searchbar-textbox,
+#urlbar:hover,
+.searchbar-textbox:hover {
+    background: #333 !important;
+    color: white !important;
+    height: 35px !important;
+    padding: 0 10px !important;
+    font-size: 1.1em !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: 0 0 0;
+    border: 0 solid transparent !important;
+}
+
+#pageActionButton,
+#pocket-button-box,
+ar-button,
+.autocomplete-history-dropmarker,
+#identity-box,
+.urlbar-history-dropmarker.urlbar-icon.chromeclass-toolbar-additional,
+#identity-icon-labels {
+    display: none !important;
+}
+
+To make the background of the new tab page the background we like on unsplash.com,
+we create the userContent.css file and place it in the following css code. @-moz-document url(about:home) {
+    body {
+        background-color: #2D253A !important;
+        background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        overflow: hidden !important;
+    }
+    #onboarding-overlay-button,
+    .prefs-button {
+        display: none !important;
+    }
+    .section-title .click-target span {
+        color: #fff !important;
+        fill: #fff !important;
+    }
+    .top-site-inner .title span {
+        color: #fff !important;
+    }
+    .prefs-pane-button button:hover {
+        background-color: #0000001a !important;
+    }
+    .edit-topsites-button .edit span {
+        color: #fff !important;
+    }
+}
+
+@-moz-document url(about:newtab) {
+    body {
+        background-color: #2D253A !important;
+        background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        overflow: hidden !important;
+    }
+    #onboarding-overlay-button,
+    .prefs-button {
+        display: none !important;
+    }
+    .section-title .click-target span {
+        color: #fff !important;
+        fill: #fff !important;
+    }
+    .top-site-inner .title span {
+        color: #fff !important;
+    }
+    .prefs-pane-button button:hover {
+        background-color: #0000001a !important;
+    }
+    .edit-topsites-button .edit span {
+        color: #fff !important;
+    }
+}
+
+@-moz-document url(about:blank) {
+    body {
+        background-color: #2D253A !important;
+        /*background-image: url("https://source.unsplash.com/user/ahmetozer/likes/1920x1080") !important;*/
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-position: center !important;
+        overflow: hidden !important;
+    }
+    #onboarding-overlay-button,
+    .prefs-button {
+        display: none !important;
+    }
+}

@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #:exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
 exec ~/bin/keylight 1
+exec pactl load-module module-bluetooth-discover
 exec lxqt-policykit-agent
 exec syncthing-gtk -m
 exec ~/bin/nvidia-setconf

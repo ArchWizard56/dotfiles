@@ -407,7 +407,7 @@ format-volume-underline = #50C878
 interval = 5
 [module/battery]
 type = internal/battery
-battery = BAT0
+battery = BAT1
 adapter = ACAD
 full-at = 98
 

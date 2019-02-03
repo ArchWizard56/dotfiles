@@ -18,7 +18,7 @@ exec xrdb ~/.Xresources
 exec feh --bg-scale ~/Images/V4LLEY.png
 exec setxkbmap -option caps:swapescape
 exec systemctl --user start xfce4-notifyd
-exec compton
+exec compton -C
 exec nm-applet
 exec ~/.config/polybar/launch.sh
 set $mod Mod4
@@ -28,7 +28,8 @@ gaps outer 15
 #Keybindings
 bindsym $mod+Tab exec rofi -show window
 #Programs
-bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+w exec --no-startup-id ~/bin/surfer
+bindsym $mod+Shift+w exec --no-startup-id firefox
 bindsym $mod+s sticky toggle
 #Audio
 bindsym $mod+ equal exec --no-startup-id pamixer -i 5

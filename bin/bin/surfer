@@ -1,0 +1,11 @@
+#!/bin/bash
+BOOKMARKS="$HOME/.bookmarks"
+URL=`sed '/^#/d' $BOOKMARKS | sed '/^$/d' | rofi -dmenu -mesg "Enter a url"`
+if [ ! -z "$URL" ] 
+then
+if [ -z `grep "$URL" $BOOKMARKS` ] && [ -z `echo "$URL" | grep '^https\?://.*\..*.$'` ]
+then
+	URL="startpage.com/do/search?q="$URL""
+fi
+surf "$URL"
+fi

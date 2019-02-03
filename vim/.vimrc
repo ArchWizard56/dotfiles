@@ -8,6 +8,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'Valloric/YouCompleteMe'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'scrooloose/nerdtree'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'skywind3000/asyncrun.vim'
@@ -26,6 +27,7 @@ set so=10
 syntax on
 nnoremap <C-t> :tabnew<cr>
 nnoremap ;sy :set spell spelllang=en_us<cr>
+nnoremap ;gw :Gwrite<cr>
 nnoremap ;sn :set nospell<cr> 
 nnoremap ;; <C-c>/<++><cr>:let @/ = ""<cr>c4l
 inoremap ;; <C-c>/<++><cr>:let @/ = ""<cr>c4l

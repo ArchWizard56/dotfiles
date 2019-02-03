@@ -1,0 +1,13 @@
+#!/bin/bash
+PREVDIR=`pwd`
+AURDIR="$HOME/Code/repos/aur"
+PACKAGE=$1
+cd $AURDIR
+aur fetch $PACKAGE
+cd $PACKAGE
+aur build -N 
+cd $AURDIR
+repose aur
+sudo pacman -Sy
+sudo pacman -S $PACKAGE
+cd $PREVDIR

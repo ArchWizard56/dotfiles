@@ -46,7 +46,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=11;1
 
 modules-left = i3 xwindow 
-modules-right =  home cpu memory battery pulseaudio date 
+modules-right =  filesystem cpu memory battery pulseaudio date 
 tray-position = right
 #tray-transparent = false
 
@@ -134,7 +134,7 @@ font-2 = siji:pixelsize=11;1
 
 modules-left = i3 playerctl xwindow 
 modules-center =  date
-modules-right = home cpu memory battery volume padding 
+modules-right = filesystem cpu memory battery volume padding 
 tray-position = right
 tray-padding = 10
 ;tray-transparent = false

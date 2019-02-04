@@ -23,6 +23,13 @@ set background=dark
 colorscheme solarized
 set number
 set relativenumber
+set tabstop=4
+set expandtab
+set showmatch
+set incsearch
+set hlsearch
+nnoremap j gj
+nnoremap k gk
 set so=10
 syntax on
 nnoremap <C-t> :tabnew<cr>

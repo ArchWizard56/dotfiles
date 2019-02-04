@@ -20,7 +20,6 @@ fi
 # Extra settings
 export KEYTIMEOUT=1
 export EDITOR=nvim
-for (( i=1; i<=$LINES; i++ )); do echo; done; clear
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/go/bin
 source $HOME/.zsh_aliases

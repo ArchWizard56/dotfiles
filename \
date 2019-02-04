@@ -1,0 +1,21 @@
+Added surfer script and fixed polybar
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Date:      Sat Feb 2 22:01:57 2019 -0800
+#
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#   (use "git push" to publish your local commits)
+#
+# Changes to be committed:
+#	new file:   bin/bin/aurinstall
+#	new file:   bin/bin/surfer
+#	new file:   compton/.config/compton/compton.conf
+#	modified:   i3/.config/i3/config
+#	modified:   polybar/.config/polybar/config
+#	new file:   vim/.vim/ftplugin/css.vim
+#	new file:   vim/.vim/ftplugin/html.vim
+#	modified:   vim/.vimrc
+#

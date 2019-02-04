@@ -26,3 +26,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/go/bin
 source $HOME/.zsh_aliases
 alias vim="nvim"
 bindkey -v
+bindkey -M vicmd '/' history-incremental-search-backward
+case $(tty) in /dev/tty[0-9]*)
+	clear
+	neofetch
+esac

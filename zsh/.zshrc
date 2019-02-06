@@ -13,9 +13,12 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/sudo
   zgen load ArchWizard56/zsh-prompt
+  zgen load zsh-users/zsh-autosuggestions
+  zgen load zsh-users/zsh-syntax-highlighting
   # generate the init script from plugins above
   zgen save
 fi
+
 
 # Extra settings
 export KEYTIMEOUT=1
@@ -31,3 +34,6 @@ case $(tty) in /dev/tty[0-9]*)
 	clear
 	neofetch
 esac
+bindkey '^ ' autosuggest-accept
+ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"

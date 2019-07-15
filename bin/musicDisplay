@@ -1,0 +1,19 @@
+#!/bin/bash
+PrevStatus=""
+SkrollId=213123123123
+while sleep 1
+do
+    if playerctl status > /dev/null 2>&1 ; then
+        CurStatus="$(playerctl status) $(playerctl metadata title) by $(playerctl metadata artist)"
+        if [ "$CurStatus" != "$PrevStatus" ]; then
+            PrevStatus="$CurStatus"
+            kill $SkrollId > /dev/null 2>&1
+            if [ ${#CurStatus} -gt 50 ]; then
+                echo "$CurStatus" | skroll -r -l -n 50 &
+                SkrollId=$!
+            else
+                echo "$CurStatus"
+            fi
+        fi
+    fi
+done

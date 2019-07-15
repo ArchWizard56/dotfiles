@@ -247,11 +247,9 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/playerctl]
 type = custom/script
-exec = echo $(playerctl status) $(playerctl metadata title) by $(playerctl metadata artist)
-interval = 1
+exec = ~/bin/musicDisplay 
 label = %{T3}%output:0:50%%{T-}
-label-underline = #0a6cf5
-exec-if = playerctl status
+tail = true
 [module/mpd]
 type = internal/mpd
 format-online = <label-song> <label-time> <toggle>

@@ -9,3 +9,4 @@ inoremap ;li <li><++></li><ESC>?<++><cr>:let @/ = ""<cr>c4l
 inoremap ;par <p><++></p><ESC>?<++><cr>:let @/ = ""<cr>c4l
 inoremap ;div <div class="<++>"><++></div><ESC>?<++><cr>n:let @/ = ""<cr>c4l
 inoremap ;href <a href="<++>"><++></a><ESC>?<++><cr>n:let @/ = ""<cr>c4l
+inoremap ;baseplate <ESC>:read ~/.vim/templates/htmltemplate.html<cr>kddGA

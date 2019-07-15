@@ -9,6 +9,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #:exec nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+for_window [instance="origin.exe"] floating enable
 exec ~/bin/keylight 1
 exec pactl load-module module-bluetooth-discover
 exec lxqt-policykit-agent
@@ -34,15 +35,22 @@ bindsym $mod+s sticky toggle
 #Audio
 bindsym $mod+ equal exec --no-startup-id pamixer -i 5
 bindsym $mod+ minus exec pamixer -d 5
-bindsym $mod+m exec pamixer -t
 bindsym $mod+i move position mouse
+bindsym $mod+shift+M exec pamixer -t
+bindsym $mod+m exec $terminal tmx music cmus
 bindsym $mod+n exec playerctl next
 bindsym $mod+p exec playerctl previous
 bindsym $mod+Shift+P exec playerctl play-pause
+#marks
+#mod
 
 #Special Window Settings
 for_window [class="mpv"] floating enable
+for_window [class="dropdown*"] floating enable
 for_window [class="mpv"] resize set 640 400
+for_window [class="dropdown*"] resize set 1280 800
+for_window [class="dropdown*"] move absolute position center
+for_window [class="dropdown*"] sticky enable
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -65,7 +73,11 @@ default_border pixel 2
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec st
+bindsym $mod+Shift+Return exec st
+
+# start a dropdown terminal
+
+bindsym $mod+Return exec st -c dropdown1 tmx dropdown1
 
 # kill focused window
 bindsym $mod+q kill

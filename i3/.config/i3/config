@@ -38,6 +38,7 @@ bindsym $mod+ minus exec pamixer -d 5
 bindsym $mod+i move position mouse
 bindsym $mod+shift+M exec pamixer -t
 bindsym $mod+m exec $terminal tmx music cmus
+bindsym $mod+shift+A exec st -c calculator tmx calculator wcalc
 bindsym $mod+n exec playerctl next
 bindsym $mod+p exec playerctl previous
 bindsym $mod+Shift+P exec playerctl play-pause
@@ -45,9 +46,12 @@ bindsym $mod+Shift+P exec playerctl play-pause
 #mod
 
 #Special Window Settings
-for_window [class="mpv"] floating enable
-for_window [class="dropdown*"] floating enable
 for_window [class="mpv"] resize set 640 400
+for_window [class="calculator"] floating enable
+for_window [class="calculator"] resize set 640 400
+for_window [class="calculator"] move absolute position 0 0
+for_window [class="calculator"] sticky enable
+for_window [class="dropdown*"] floating enable
 for_window [class="dropdown*"] resize set 1280 800
 for_window [class="dropdown*"] move absolute position center
 for_window [class="dropdown*"] sticky enable

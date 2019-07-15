@@ -16,7 +16,7 @@ exec lxqt-policykit-agent
 exec syncthing-gtk -m
 exec ~/bin/nvidia-setconf
 exec xrdb ~/.Xresources
-exec feh --bg-scale ~/Images/V4LLEY.png
+exec feh --bg-scale ~/Images/Wallpapers/wallpaper.png
 exec setxkbmap -option caps:swapescape
 exec systemctl --user start xfce4-notifyd
 exec compton -C

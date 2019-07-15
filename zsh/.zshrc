@@ -40,6 +40,5 @@ case $(tty) in /dev/tty[0-9]*)
 esac
 bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
-GOPATH=$HOME/.go
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
 eval "$(direnv hook zsh)"

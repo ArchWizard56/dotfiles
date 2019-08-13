@@ -10,6 +10,6 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 # Launch bar1 and bar2
 #polybar example &
 
-for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar bottombar -c ~/.config/polybar/config & done
-
+#for i in $(polybar -m | awk -F: '{print $1}'); do MONITOR=$i polybar bottombar -c ~/.config/polybar/config & done
+polybar bottombar -c ~/.config/polybar/config &
 echo "Bars launched..."

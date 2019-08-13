@@ -15,5 +15,7 @@ do
                 echo "$CurStatus"
             fi
         fi
+    else
+        echo
     fi
 done

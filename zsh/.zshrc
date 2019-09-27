@@ -20,6 +20,7 @@ if ! zgen saved; then
 fi
 
 
+alias todo=todo.sh
 # Extra settings
 export KEYTIMEOUT=1
 export EDITOR=nvim
@@ -28,6 +29,7 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export PATH=$HOME/bin:/usr/local/bin:$PATH:$HOME/go/bin
 source $HOME/.zsh_aliases
 alias vim="nvim"
+alias please='sudo $(fc -ln -1)'
 bindkey -v
 bindkey -M vicmd '/' history-incremental-search-backward
 case $(tty) in /dev/tty[0-9]*)
@@ -42,3 +44,5 @@ bindkey '^ ' autosuggest-accept
 ZSH_AUTOSUGGEST_STRATEGY=match_prev_cmd
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=243"
 eval "$(direnv hook zsh)"
+
+eval $(thefuck --alias)
